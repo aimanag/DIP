@@ -1,0 +1,8 @@
+import cv2
+from google.colab.patches import cv2_imshow
+import numpy as np
+import matplotlib.pyplot as plt
+domainFilter = cv2.edgePreservingFilter(src, flags=1, sigma_s=60, sigma_r=0.6)
+cv2_imshow(np.hstack((domainFilter, Hp)))
+cv2.waitKey(0)
+cv2.destroyAllWindows()
